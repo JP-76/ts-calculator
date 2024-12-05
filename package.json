@@ -1,0 +1,53 @@
+{
+    "name": "calculadora-muito-foda",
+    "version": "1.0.0",
+    "description": "A simple calculator library for basic arithmetic operations.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "lint": "eslint . --ext .ts",
+        "prepublishOnly": "npm run build && npm run test",
+        "prepare": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JP-76/ts-calculator.git"
+    },
+    "keywords": [
+        "calculator",
+        "typescript",
+        "library",
+        "arithmetic"
+    ],
+    "author": "João Pedro Spinassé Viana <joaopedro.spinasse@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^29.5.14",
+        "@typescript-eslint/eslint-plugin": "^6.3.0",
+        "@typescript-eslint/parser": "^6.3.0",
+        "eslint": "^8.50.0",
+        "jest": "^29.0.0",
+        "ts-jest": "^29.0.0",
+        "typescript": "^5.0.0"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testEnvironment": "node",
+        "testMatch": [
+            "**/tests/**/*.test.ts"
+        ]
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    }
+}
